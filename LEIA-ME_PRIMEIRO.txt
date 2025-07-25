@@ -1,0 +1,102 @@
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                ║
+║                          🏰 BOT TIBIA INDETECTÁVEL - VERSÃO 2.0 🏰                          ║
+║                                                                                                ║
+║                                  LEIA-ME PRIMEIRO                                             ║
+║                                                                                                ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+👋 OLÁ! Obrigado por baixar o Bot Tibia Indetectável!
+
+📋 INSTRUÇÕES RÁPIDAS:
+════════════════════════════════════════════════════════════════════════════════════════════════
+
+1. 🔧 INSTALAÇÃO AUTOMÁTICA:
+   • Clique duplo em "INSTALAR_BOT.bat"
+   • Aguarde a instalação terminar
+   • Siga as instruções na tela
+
+2. 🚀 EXECUTAR O BOT:
+   • Abra o Tibia primeiro
+   • Entre com seu personagem
+   • Clique duplo em "EXECUTAR_BOT.bat"
+   • Configure na interface web
+
+3. 📖 MANUAL COMPLETO:
+   • Abra "MANUAL_INSTALACAO.md" para instruções detalhadas
+   • Contém solução para todos os problemas
+   • Explicações passo a passo
+
+⚠️ IMPORTANTE:
+════════════════════════════════════════════════════════════════════════════════════════════════
+
+• Execute como ADMINISTRADOR para melhor compatibilidade
+• Certifique-se de ter Python e Node.js instalados
+• Mantenha o Tibia aberto durante o uso
+• Configure suas hotkeys no Tibia antes de usar
+
+🎮 PRIMEIRA VEZ?
+════════════════════════════════════════════════════════════════════════════════════════════════
+
+1. Instale os programas necessários:
+   • Python: https://www.python.org/downloads/
+   • Node.js: https://nodejs.org/
+   
+2. Execute: INSTALAR_BOT.bat
+
+3. Leia: MANUAL_INSTALACAO.md
+
+4. Execute: EXECUTAR_BOT.bat
+
+📁 ARQUIVOS IMPORTANTES:
+════════════════════════════════════════════════════════════════════════════════════════════════
+
+• INSTALAR_BOT.bat ................... Instalador automático
+• EXECUTAR_BOT.bat ................... Inicia o bot
+• PARAR_BOT.bat ...................... Para o bot
+• VERIFICAR_INSTALACAO.bat ........... Verifica se está tudo OK
+• MANUAL_INSTALACAO.md ............... Manual completo
+• LEIA-ME_PRIMEIRO.txt ............... Este arquivo
+
+🆘 PROBLEMAS?
+════════════════════════════════════════════════════════════════════════════════════════════════
+
+1. Execute: VERIFICAR_INSTALACAO.bat
+2. Leia: MANUAL_INSTALACAO.md (seção "Problemas Comuns")
+3. Certifique-se de ter Python e Node.js instalados
+4. Execute como administrador
+
+🛡️ AVISO LEGAL:
+════════════════════════════════════════════════════════════════════════════════════════════════
+
+• Este bot é destinado para uso educacional e em servidores OT
+• Para Tibia Global: Use por sua conta e risco
+• Não nos responsabilizamos por punições ou banimentos
+• Respeite os termos de serviço do jogo
+
+✨ RECURSOS:
+════════════════════════════════════════════════════════════════════════════════════════════════
+
+• Interface web moderna e intuitiva
+• Auto-cura inteligente
+• Auto-ataque com detecção de criaturas
+• Sistema de loot para Free Account
+• Waypoints fáceis de configurar
+• Movimentos humanizados (anti-detecção)
+• Estatísticas em tempo real
+• Histórico de sessões
+
+🎯 COMEÇAR AGORA:
+════════════════════════════════════════════════════════════════════════════════════════════════
+
+1. 🔧 Execute: INSTALAR_BOT.bat
+2. 🎮 Abra o Tibia e entre com seu char
+3. 🚀 Execute: EXECUTAR_BOT.bat
+4. ⚙️ Configure na interface web
+5. ▶️ Clique "Iniciar" e aproveite!
+
+════════════════════════════════════════════════════════════════════════════════════════════════
+
+🏰 Divirta-se e bom jogo! ⚔️
+
+Bot Tibia Indetectável v2.0 - 2025
