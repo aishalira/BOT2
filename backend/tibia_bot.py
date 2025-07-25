@@ -18,6 +18,9 @@ from datetime import datetime
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Set environment for headless operation
+os.environ.setdefault('DISPLAY', ':0')
+
 # Mock classes for headless environment
 class MockPyAutoGUI:
     FAILSAFE = False
@@ -77,8 +80,8 @@ try:
     import pyautogui
     pyautogui.FAILSAFE = False
     pyautogui.PAUSE = 0.01
-except ImportError:
-    logger.warning("PyAutoGUI not available, using mock")
+except Exception as e:
+    logger.warning(f"PyAutoGUI not available, using mock: {e}")
     pyautogui = MockPyAutoGUI()
 
 try:
@@ -101,8 +104,8 @@ except ImportError:
 
 try:
     from pynput import mouse, keyboard
-except ImportError:
-    logger.warning("Pynput not available, using mock")
+except Exception as e:
+    logger.warning(f"Pynput not available, using mock: {e}")
     class MockPynput:
         class mouse:
             Button = type('Button', (), {'left': 1, 'right': 2})()
