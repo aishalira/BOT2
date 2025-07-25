@@ -1,0 +1,188 @@
+{
+  "total": 14,
+  "passed": 13,
+  "failed": 1,
+  "success_rate": 92.85714285714286,
+  "results": [
+    {
+      "test": "Health Check",
+      "success": true,
+      "message": "Health endpoint responding correctly",
+      "details": {
+        "status_code": 200,
+        "response": {
+          "status": "healthy",
+          "timestamp": "2025-07-25T14:43:47.236743"
+        }
+      },
+      "timestamp": "2025-07-25T14:43:47.241005"
+    },
+    {
+      "test": "Get Bot Config",
+      "success": true,
+      "message": "Successfully retrieved bot configuration",
+      "details": {
+        "status_code": 200,
+        "has_default_config": false
+      },
+      "timestamp": "2025-07-25T14:43:47.752243"
+    },
+    {
+      "test": "Save Bot Config",
+      "success": true,
+      "message": "Successfully saved bot configuration",
+      "details": {
+        "status_code": 200,
+        "config_id": "192679bc-4289-46d9-8740-8c5828a1cb26",
+        "message": "Configura\u00e7\u00e3o salva com sucesso!"
+      },
+      "timestamp": "2025-07-25T14:43:48.270553"
+    },
+    {
+      "test": "Bot Status",
+      "success": true,
+      "message": "Bot status endpoint working correctly",
+      "details": {
+        "status_code": 200,
+        "is_running": false,
+        "is_paused": false,
+        "session_id": "ee0afa6e-9587-43bd-953f-8fde462f2b2f"
+      },
+      "timestamp": "2025-07-25T14:43:48.780593"
+    },
+    {
+      "test": "Start Bot",
+      "success": true,
+      "message": "Bot started successfully",
+      "details": {
+        "status_code": 200,
+        "session_id": "99578e90-e303-4bd7-9944-9a0f53ff16ed",
+        "is_running": true,
+        "message": "Bot iniciado com sucesso!"
+      },
+      "timestamp": "2025-07-25T14:43:49.295258"
+    },
+    {
+      "test": "Pause/Resume Bot",
+      "success": true,
+      "message": "Bot pause/resume successful: Bot pausado com sucesso!",
+      "details": {
+        "status_code": 200,
+        "is_paused": true,
+        "is_running": true
+      },
+      "timestamp": "2025-07-25T14:43:51.111409"
+    },
+    {
+      "test": "Current Position",
+      "success": true,
+      "message": "Position retrieved successfully",
+      "details": {
+        "status_code": 200,
+        "x": 1031,
+        "y": 1030,
+        "message": "Posi\u00e7\u00e3o capturada com sucesso!"
+      },
+      "timestamp": "2025-07-25T14:43:51.621002"
+    },
+    {
+      "test": "Add Waypoint",
+      "success": true,
+      "message": "Waypoint added successfully",
+      "details": {
+        "status_code": 200,
+        "waypoint_id": "10768203-7305-473b-92e4-441232de6922",
+        "total_waypoints": 3
+      },
+      "timestamp": "2025-07-25T14:43:52.132704"
+    },
+    {
+      "test": "Delete Waypoint",
+      "success": true,
+      "message": "Waypoint deleted successfully",
+      "details": {
+        "status_code": 200,
+        "remaining_waypoints": 2
+      },
+      "timestamp": "2025-07-25T14:43:52.184429"
+    },
+    {
+      "test": "Bot Sessions",
+      "success": true,
+      "message": "Session history retrieved successfully",
+      "details": {
+        "status_code": 200,
+        "total_sessions": 0,
+        "sessions_count": 0
+      },
+      "timestamp": "2025-07-25T14:43:52.694852"
+    },
+    {
+      "test": "Bot Statistics",
+      "success": true,
+      "message": "Statistics retrieved successfully",
+      "details": {
+        "status_code": 200,
+        "has_current_session": true,
+        "has_historical": false
+      },
+      "timestamp": "2025-07-25T14:43:53.206231"
+    },
+    {
+      "test": "Bot Commands - Get Position",
+      "success": true,
+      "message": "Get position command executed successfully",
+      "details": {
+        "status_code": 200,
+        "message": "Posi\u00e7\u00e3o obtida",
+        "has_data": true
+      },
+      "timestamp": "2025-07-25T14:43:53.716231"
+    },
+    {
+      "test": "Bot Commands - Reset Stats",
+      "success": true,
+      "message": "Reset stats command executed successfully",
+      "details": {
+        "status_code": 200,
+        "message": "Estat\u00edsticas resetadas"
+      },
+      "timestamp": "2025-07-25T14:43:53.725820"
+    },
+    {
+      "test": "Stop Bot",
+      "success": true,
+      "message": "Bot stopped successfully",
+      "details": {
+        "status_code": 200,
+        "is_running": false,
+        "message": "Bot parado com sucesso!"
+      },
+      "timestamp": "2025-07-25T14:43:54.249366"
+    },
+    {
+      "test": "WebSocket Connection",
+      "success": false,
+      "message": "WebSocket connection failed or no messages received",
+      "details": {
+        "connected": false,
+        "messages_received": 1
+      },
+      "timestamp": "2025-07-25T14:43:57.750247"
+    },
+    {
+      "test": "TibiaBot Core Classes",
+      "success": true,
+      "message": "Core bot classes instantiated and basic methods working",
+      "details": {
+        "bot_created": true,
+        "status_method": true,
+        "position_method": true,
+        "detector_created": true,
+        "screenshot_captured": true,
+        "automation_created": true
+      },
+      "timestamp": "2025-07-25T14:43:59.280629"
+    }
+  ]
+}
