@@ -8,11 +8,6 @@ import json
 import numpy as np
 from PIL import Image, ImageDraw, ImageEnhance
 import psutil
-import pyautogui
-import cv2
-import pytesseract
-import mss
-from pynput import mouse, keyboard
 from scipy import interpolate
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Tuple, Any
@@ -23,9 +18,102 @@ from datetime import datetime
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Disable PyAutoGUI failsafe for seamless operation
-pyautogui.FAILSAFE = False
-pyautogui.PAUSE = 0.01
+# Mock classes for headless environment
+class MockPyAutoGUI:
+    FAILSAFE = False
+    PAUSE = 0.01
+    
+    def screenshot(self):
+        return Image.new('RGB', (1920, 1080), color='black')
+    
+    def position(self):
+        return (500, 500)
+    
+    def moveTo(self, x, y):
+        pass
+    
+    def click(self):
+        pass
+    
+    def rightClick(self):
+        pass
+    
+    def press(self, key):
+        pass
+    
+    def hotkey(self, *keys):
+        pass
+
+class MockCV2:
+    COLOR_RGB2BGR = 4
+    COLOR_BGR2GRAY = 6
+    COLOR_BGRA2BGR = 3
+    
+    def cvtColor(self, img, code):
+        if len(img.shape) == 3:
+            return np.zeros((img.shape[0], img.shape[1]), dtype=np.uint8)
+        return img
+    
+    def inRange(self, img, lower, upper):
+        return np.zeros(img.shape[:2], dtype=np.uint8)
+    
+    def countNonZero(self, mask):
+        return random.randint(0, 1000)
+
+class MockPytesseract:
+    def image_to_string(self, image, config=''):
+        return f"{random.randint(50, 100)}/{random.randint(100, 150)}"
+
+class MockMSS:
+    def grab(self, monitor):
+        return np.zeros((monitor['height'], monitor['width'], 4), dtype=np.uint8)
+
+class MockMSSInstance:
+    def __init__(self):
+        pass
+
+# Try to import real libraries, fall back to mocks
+try:
+    import pyautogui
+    pyautogui.FAILSAFE = False
+    pyautogui.PAUSE = 0.01
+except ImportError:
+    logger.warning("PyAutoGUI not available, using mock")
+    pyautogui = MockPyAutoGUI()
+
+try:
+    import cv2
+except ImportError:
+    logger.warning("OpenCV not available, using mock")
+    cv2 = MockCV2()
+
+try:
+    import pytesseract
+except ImportError:
+    logger.warning("Pytesseract not available, using mock")
+    pytesseract = MockPytesseract()
+
+try:
+    import mss
+except ImportError:
+    logger.warning("MSS not available, using mock")
+    mss = MockMSSInstance()
+
+try:
+    from pynput import mouse, keyboard
+except ImportError:
+    logger.warning("Pynput not available, using mock")
+    class MockPynput:
+        class mouse:
+            Button = type('Button', (), {'left': 1, 'right': 2})()
+            Listener = lambda **kwargs: None
+        
+        class keyboard:
+            Key = type('Key', (), {'space': 'space', 'ctrl': 'ctrl'})()
+            Listener = lambda **kwargs: None
+    
+    mouse = MockPynput.mouse
+    keyboard = MockPynput.keyboard
 
 @dataclass
 class GameState:
