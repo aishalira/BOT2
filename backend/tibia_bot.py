@@ -151,7 +151,11 @@ class TibiaDetector:
     """Handles all Tibia game detection and screen analysis"""
     
     def __init__(self):
-        self.sct = mss.mss()
+        try:
+            self.sct = mss.mss() if hasattr(mss, 'mss') else None
+        except:
+            self.sct = None
+        
         self.tibia_window = None
         self.game_area = None
         self.last_screenshot = None
